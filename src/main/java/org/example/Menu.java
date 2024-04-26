@@ -145,19 +145,16 @@ class Menu {
                     break;
 
                 case 11:
-                    scanner.nextLine(); // Считываем символ новой строки после выбора опции из меню
+                    scanner.nextLine();
                     System.out.println("Введите сообщение для таблички заключенного:");
-                    String message = scanner.nextLine(); // Считываем сообщение с консоли
-                    inmateBoard.printMessage(message); // Вызываем функцию для печати сообщения на табличке заключенного
+                    String message = scanner.nextLine();
+                    inmateBoard.printMessage(message);
                     break;
                 case 12:
-                    // Запрашиваем идентификатор заключенного
                     System.out.println("Введите идентификатор заключенного:");
                     prisonerID = scanner.next();
-                    // Проверяем формат идентификатора
                     if (prisonerID.matches("ID\\d+")) {
-                        // Если формат верный, отображаем информацию о заключенном
-                        Prisoner prisoner = prison.getPrisonerById(prisonerID); // Предположим, что такой метод есть в классе Prison
+                        Prisoner prisoner = prison.getPrisonerById(prisonerID);
                         if (prisoner != null) {
                             prisoner.displayInformation(); // Вызываем метод displayInformation() для отображения информации о заключенном
                         } else {

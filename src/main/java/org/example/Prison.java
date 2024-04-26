@@ -10,9 +10,12 @@ class Prison {
     public Prison() {
         this.prisoners = new HashMap<>();
         // Добавим несколько примеров заключенных для тестирования
-        prisoners.put("ID1", new Prisoner("ID1", 'M', LocalDate.of(1990, 5, 15), "Убийство"));
-        prisoners.put("ID2", new Prisoner("ID2", 'F', LocalDate.of(1985, 8, 22), "Кража"));
-        prisoners.put("ID3", new Prisoner("ID3", 'M', LocalDate.of(1976, 3, 10), "Наркотики"));
+        prisoners.put("ID1", new Prisoner("ID1", 'M',
+                LocalDate.of(1990, 5, 15), "Убийство"));
+        prisoners.put("ID2", new Prisoner("ID2", 'F',
+                LocalDate.of(1985, 8, 22), "Кража"));
+        prisoners.put("ID3", new Prisoner("ID3", 'M',
+                LocalDate.of(1976, 3, 10), "Наркотики"));
     }
 
     // Добавляем ДОП метод для получения заключенного по идентификатору
